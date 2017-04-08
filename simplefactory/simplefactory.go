@@ -10,14 +10,14 @@ type IProduct interface {
 type ProductA struct {
 }
 
-func (p *ProductA) ShowProduct() {
+func (*ProductA) ShowProduct() {
 	fmt.Println("i am product a")
 }
 
 type ProductB struct {
 }
 
-func (p *ProductB) ShowProduct() {
+func (*ProductB) ShowProduct() {
 	fmt.Println("i am product b")
 }
 
@@ -25,7 +25,7 @@ func (p *ProductB) ShowProduct() {
 type Factory struct {
 }
 
-func (f *Factory) CreateProduct(product string) IProduct {
+func (*Factory) CreateProduct(product string) IProduct {
 	switch product {
 	case "A":
 		return new(ProductA)
