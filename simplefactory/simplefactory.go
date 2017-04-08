@@ -25,6 +25,7 @@ func (*ProductB) ShowProduct() {
 type Factory struct {
 }
 
+//CreateProduct create diff product by Factory instance
 func (*Factory) CreateProduct(product string) IProduct {
 	switch product {
 	case "A":
