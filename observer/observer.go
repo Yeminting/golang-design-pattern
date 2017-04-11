@@ -38,9 +38,11 @@ func (s *SubjectA) Subscribe(o IObserver) {
 }
 
 func (s *SubjectA) Unsubscribe(o IObserver) {
-	for _, observer := range s.observers {
+	for index, observer := range s.observers {
 		if o == observer {
-
+			//delete o
+			s.observers = append(s.observers[:index], s.observers[index+1:]...)
+			break
 		}
 	}
 }
