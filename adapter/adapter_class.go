@@ -10,7 +10,7 @@ type Adaptee struct {
 }
 
 func (*Adaptee) AdapteeMethod() {
-	fmt.Println("AdapteeMethod")
+	fmt.Println("Adaptee Class Method")
 }
 
 type Adapter struct {
