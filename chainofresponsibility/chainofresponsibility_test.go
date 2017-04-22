@@ -1,4 +1,4 @@
-package chain_of_responsibility
+package chainofresponsibility
 
 import "testing"
 
